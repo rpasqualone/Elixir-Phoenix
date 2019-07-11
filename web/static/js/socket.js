@@ -59,8 +59,8 @@ channel.join()
   .receive("ok", resp => { console.log("Joined successfully", resp) })
   .receive("error", resp => { console.log("Unable to join", resp) })
 
-document.querySelector('button').addEventListener('click', () => {
-  channel.push('comment:hello', {hi: 'there'});
+document.querySelector('button') && document.querySelector('button').addEventListener('click', () => {
+  channel.push('comment:hello', {hi: "there"});
 });
 
 export default socket
